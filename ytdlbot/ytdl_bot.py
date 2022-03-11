@@ -5,7 +5,7 @@
 # 8/14/21 14:37
 #
 
-__author__ = "Benny <benny.think@gmail.com>"
+__author__ = "AXD@LOL"
 
 import logging
 import os
@@ -337,7 +337,7 @@ def periodic_sub_check():
 
 if __name__ == '__main__':
     MySQL()
-    scheduler = BackgroundScheduler(timezone="Asia/Shanghai", job_defaults={'max_instances': 5})
+    scheduler = BackgroundScheduler(timezone="Asia/kolkata", job_defaults={'max_instances': 5})
     scheduler.add_job(Redis().reset_today, 'cron', hour=0, minute=0)
     scheduler.add_job(auto_restart, 'interval', seconds=5)
     scheduler.add_job(InfluxDB().collect_data, 'interval', seconds=60)
@@ -350,7 +350,7 @@ if __name__ == '__main__':
  ▌  ▌ ▌ ▌ ▌  ▌  ▌ ▌ ▌ ▌ ▛▀  ▌ ▌ ▌ ▌ ▐▐▐  ▌ ▌ ▐  ▌ ▌ ▞▀▌ ▌ ▌
  ▘  ▝▀  ▝▀▘  ▘  ▝▀▘ ▀▀  ▝▀▘ ▀▀  ▝▀   ▘▘  ▘ ▘  ▘ ▝▀  ▝▀▘ ▝▀▘
 
-By @BennyThink, VIP mode: {ENABLE_VIP}, Distribution: {ENABLE_CELERY}
+By @AXD, VIP mode: {ENABLE_VIP}, Distribution: {ENABLE_CELERY}
 Version: {get_revision()}
     """
     print(banner)
